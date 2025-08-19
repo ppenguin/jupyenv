@@ -80,7 +80,7 @@
           poetry2nix.overlays.default
         ];
 
-        python = pkgs.python3;
+        python = pkgs.python312;
 
         baseArgs = {
           inherit self system;

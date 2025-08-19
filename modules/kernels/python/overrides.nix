@@ -26,7 +26,8 @@ pkgs: let
           sha256 = "sha256-R6/Y9brIYBA1P3YeG8zGaoPcxWFUDqZlqbZpWu3MIIw=";
         };
       });
-      cython = prev.cython.overridePythonAttrs (old: rec {
+      /*
+         cython = prev.cython.overridePythonAttrs (old: rec {
         version = "3.0.11-1";
         src = prev.pkgs.fetchFromGitHub {
           owner = "cython";
@@ -36,6 +37,7 @@ pkgs: let
         };
         patches = [];
       });
+      */
       pyzmq = prev.pyzmq.overridePythonAttrs (old: {
         buildInputs =
           (old.buildInputs or [])
